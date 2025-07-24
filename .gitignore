@@ -1,0 +1,15 @@
+.env
+templates/cover_letter.tex
+templates/cover_letter.pdf
+templates/cv.tex
+templates/cv.pdf
+
+# latex aux files
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk

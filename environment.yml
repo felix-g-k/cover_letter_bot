@@ -1,0 +1,12 @@
+name: cover_letter_bot
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11  # or your preferred version
+  - requests
+  - beautifulsoup4
+  - pip
+  - pip:
+      - openai
+      - python-dotenv

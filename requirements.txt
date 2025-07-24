@@ -1,0 +1,81 @@
+openai
+requests
+beautifulsoup4
+python-dotenv
+
+        Given the following:
+
+        CV of the candidate:
+
+        templates/cv.tex
+
+        Job listing:
+
+        Du machst den Unterschied.
+Ob im Business Audit & Assurance, Tax & Legal, Consulting oder Advisory. Wir bei Deloitte unterstützen unsere weltweiten Mandanten dabei, sich kontinuierlich weiterzuentwickeln und zu wachsen. Entdecke ein vielfältiges Arbeitsumfeld, das ständig in Bewegung ist und immer um ein Zentrum kreist: dich und dein Know-how. What impact will you make?
+Du bist Absolvent:in oder beabsichtigst, in Kürze dein Studium zu beenden? Unser Trainee-Programm im Team
+Consulting - Artificial Intelligence & Data
+ist dein perfektes Sprungbrett in eine Karriere mit Fokus auf datengetriebene Transformationen mit Unterstützung von künstlicher Intelligenz. Sichere unseren gemeinsamen Erfolg und mach mit uns den Unterschied: als
+Trainee Cloud & Data / Artificial Intelligence & Data (m/w/d)
+.
+Hard Facts für deinen Einstieg:
+Beginn: 01.10.2025
+Dauer: 12 Wochen Trainingsprogramm in unbefristeter Festanstellung
+Bewerbungsschluss: Sonntag, den 10.08.2025
+Standorte:
+Berlin
+, Düsseldorf
+, Frankfurt (Main)
+, Hamburg
+, Hannover
+, Köln
+, München
+und Stuttgart
+.
+Dein Impact:
+Als Trainee Cloud & Data (m/w/d) bist du bereit für den Einstieg in die Unternehmensberatung mit Schwerpunkt Cloud & Data Analytics. Nach Abschluss deines siebenwöchigen Trainings nimmst du nahtlos den Weg ins Projektgeschäft und nutzt deine erlernten Fähigkeiten, um Mehrwert für unsere Kunden zu schaffen.
+Verantwortung: Führe Artificial Intelligence & Data Projekte im Team zum Erfolg und begleite ihre Lösung vom strategischen Design bis hin zur technischen Umsetzung
+Unterstützung: Erarbeite innovative Einsatzmöglichkeiten von Artificial Intelligence Lösungen zur Verbesserung der Effizienz und Effektivität des Data Management
+Großkunden: Arbeite mit prestigeträchtigen Kunden an der Analyse und Aufbereitung von multi-strukturierten Datenbeständen
+Innovation: Du erlernst die modernsten (Cloud-) Technologien für datengetriebene Transformation und bereitest dich mit umfassenden Trainings auf Zertifizierungen in für dich interessanten Cloud-, Datenmanagement oder Automatisierungstechnologien auf den Berateralltag vor.
+Dein Skillset:
+Abschluss eines Studiums in (Wirtschafts-)Informatik, (Wirtschafts-) Ingenieurwesen, Wirtschaftswissenschaften mit Informatikbezug oder vergleichbaren Studiengängen
+Erste berufliche Erfahrungen durch Praktika oder Werkstudententätigkeiten, idealerweise in der Unternehmensberatung im Umfeld von Analytics, Gen AI und Cloud Technologien
+Programmierkenntnisse in Python, Java, SQL oder Scala sowie Frameworks wie Spark und Databricks
+Interesse an der teamorientierten, agilen Projektarbeit und am Einstieg in die Unternehmensberatung
+Reisebereitschaft sowie Deutsch (C1) und Englisch sehr gut in Wort und Schrift
+Deine Chance:
+Spannende Aufgaben in einem innovativen Umfeld mit hochmotivierten Kolleg:innen, die sich schon jetzt auf deine Impulse freuen
+Gute Rahmenbedingungen mit attraktivem Gehalt und zahlreichen Zusatzleistungen, z. B. Firmen-Smartphone zur privaten Nutzung, Fahrradleasing und Corporate Benefits
+Work-Life-Balance durch Mobile Working & Teilzeit, EU Remote Working, Sabbaticals, Mitarbeiter:innen-Events, Well-being Angebote wie z. B. Gesundheitstage, Kooperationen mit Fitness-Anbietern und den Familienservice, der dich bei privaten Herausforderungen unterstützt
+Exzellente Weiterbildung an der Deloitte University, in On- und Offline-Seminaren und im Rahmen der Berufsqualifikation, z. B. durch folgende Schulungen: „Microsoft Azure Data Engineer“ und „Google Cloud Platform Data Engineer“
+Vielfältige Gestaltungsspielräume und aktive Förderung einer inklusiven Unternehmenskultur – u. a. durch unsere Diversity & Inclusion Mitarbeiter:innen-Netzwerke
+Bist du bereit? Mach mit uns den Unterschied!
+Unser Recruiting-Team freut sich auf deine Bewerbungsunterlagen (CV sowie Abitur-, Hochschul- und Arbeitszeugnisse) über unser Online-Formular. Ein Anschreiben und ein Bewerbungsfoto sind bei uns nicht erforderlich.
+Gleiche Chancen für alle:
+Wir freuen uns über Bewerbungen von Menschen, die so vielfältig sind wie wir – unabhängig von Alter, Behinderung, ethnischer Herkunft und Nationalität, Geschlecht, Religion, sexueller Orientierung oder sozialer Herkunft.
+Noch Fragen?
+Alle Infos zu unserem Bewerbungsprozess findest du in unseren
+Bewerbungs-FAQs
+.
+Job-ID: 48207
+
+        Template cover letter (style, format, tone preference):
+templates/cover_letter.tex
+
+        Write a tailored, convincing cover letter that:
+
+        Matches the tone and structure of the provided template, adapting language, formality, and layout accordingly.
+
+        Clearly emphasizes the most relevant skills, accomplishments, and experiences from the CV that align with the specific responsibilities and qualifications listed in the job posting.
+
+        Highlights the candidate’s motivation and enthusiasm for the role, the company, and the broader industry—drawing on elements such as past experiences, values alignment, or specific company initiatives.
+
+        Maintains a tone that is formal.
+
+        There is no specific focus on the cover letter.
+
+        The cover letter should be no longer than 1000 words.
+
+        Return only the final version of the cover letter, ready to be submitted. Do not include commentary or analysis. Use the same template as provided and the same file format.
+    
