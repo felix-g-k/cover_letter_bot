@@ -56,6 +56,7 @@ def main():
     parser.add_argument("--focus", required=False, help="Focus of the cover letter")
     parser.add_argument("--output-latex", default="output/cover_letter.tex", help="Path to save the generated LaTeX cover letter")
     parser.add_argument("--output-pdf", default="output/cover_letter.pdf", help="Path to save the generated PDF cover letter")
+    parser.add_argument("--debug", default=False, help="Debug mode")
     args = parser.parse_args()
 
     paths = {
@@ -91,9 +92,16 @@ def main():
 
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY")
-    cover_letter = generate_cover_letter(prompt, api_key)
-    save_cover_letter(cover_letter, paths["out_latex"])
-    print(f"Cover letter LaTeX saved to {paths['out_latex']}")
+
+    if not args.debug:
+        cover_letter = generate_cover_letter(prompt, api_key)
+        save_cover_letter(cover_letter, paths["out_latex"])
+        print(f"Cover letter LaTeX saved to {paths['out_latex']}")
+    else:
+        print("Debug mode enabled. Prompt:")
+        print(prompt)
+        paths["out_latex"] = "output/example_cover_letter.tex"
+        paths["out_pdf"] = "output/example_cover_letter.pdf"
 
     # Step 3: Render PDF from LaTeX
     print("Rendering PDF from LaTeX...")
