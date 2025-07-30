@@ -13,3 +13,6 @@ templates/cv.pdf
 *.blg
 *.fls
 *.fdb_latexmk
+
+# other unwanted files
+*.pyc

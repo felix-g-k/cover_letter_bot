@@ -3,7 +3,9 @@ import os
 from openai import OpenAI
 from dotenv import load_dotenv
 from pathlib import Path
-from utils import load_latex_template
+from .utils import load_latex_template
+
+OUTPUT_DIR = "output"
 
 def load_text_file(path: str) -> str:
     with open(path, "r", encoding="utf-8") as f:
@@ -70,35 +72,43 @@ def generate_cover_letter(prompt: str, api_key: str, model: str = "gpt-4.1") -> 
     )
     return response.choices[0].message.content.strip()
 
-def save_cover_letter(text: str, output_path: str = "output/cover_letter.txt"):
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(text)
+def save_cover_letter(text: str, out_path: str = "cover_letter"):
+    """
+    Save cover letter text to file, overwriting if file already exists.
+    
+    Args:
+        text: The cover letter content to save
+        output_path: Path where to save the file (will overwrite if exists)
+    """
 
-def main(
-    job_desc_path: str,
-    cv_path: str,
-    api_key: str,
-    template_path: str = None,
-    output_path: str = "output/cover_letter.txt"
-):
-    job_desc = load_text_file(job_desc_path)
+    try:
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(text)
+                
+    except Exception as e:
+        print(f"Error creating output directory {out_path}: {e}")
+        print(f"Manually removing file {out_path}")
+        os.remove(out_path)
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(text)
+
+def generator_main(job_desc_path: str, cv_path: str, api_key: str, template_path: str = None, out_name: str = "cover_letter"):
+
+    with open(job_desc_path, 'r') as f:
+        job_desc = f.read()
+
+    # format out_name to not contain file extension in case user provides file extension
+    if out_name.endswith(".tex"): 
+        out_name = out_name[:-4]
+
+    out_path = os.path.join(OUTPUT_DIR, f"{out_name}.tex")
     cv = load_latex_template(cv_path)
     template = load_latex_template(template_path) if template_path else ""
     prompt = build_prompt(job_desc, cv, template)
     cover_letter = generate_cover_letter(prompt, api_key)
-    save_cover_letter(cover_letter, output_path)
-    print(f"Cover letter saved to {output_path}")
-
-if __name__ == "__main__":
-    # Example usage (replace with argparse or CLI as needed)
-    load_dotenv()
-    #api_key = os.getenv("OPENAI_API_KEY")
-    api_key = "???"
-    main(
-        job_desc_path="output/job_description.txt",
-        cv_path="templates/cv.tex",
-        api_key=api_key,
-        template_path="templates/cover_letter.tex",
-        output_path="output/cover_letter.tex"
-    )
+    save_cover_letter(cover_letter, out_path)
+    

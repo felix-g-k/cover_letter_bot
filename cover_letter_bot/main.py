@@ -109,4 +109,4 @@ def main():
     print(f"PDF saved to {paths['out_pdf']}")
 
 if __name__ == "__main__":
-    main() 
+    main()
